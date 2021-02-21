@@ -40,6 +40,11 @@ const binaryTree = ()=>{
     tree.add(40);
     tree.add(120);
     tree.add(70);
+
+    let array = [8, 10, 12, 5, 3, 6];
+    let result = array.forEach(function(el){
+        tree.add(el);
+    })
 }
 
 module.exports = binaryTree;
