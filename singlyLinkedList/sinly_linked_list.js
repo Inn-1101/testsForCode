@@ -50,11 +50,35 @@ Node.prototype.search = function(val) {
            }
       }
 
+    Node.prototype.findAndCopy = function (val) {
+        let current = this;
+        let newObj;
+        let currentNew;
+        let copyMode = false;
+        while (current) {
+          if (copyMode) {
+            currentNew.next = new Node(current.val);
+            currentNew = currentNew.next;
+          } else {
+            if (current.val === val) {
+              newObj = new Node(val);
+              currentNew = newObj;
+              copyMode = true;
+            }
+          }
+          current = current.next;
+        }
+        return newObj;
+      }
+
   let list  = new Node(1);
   list.add(2);
   list.add(3);
   list.add(5);
   list.add(4);
+  list.search(2);
+  list.remove(4);
+  list.findAndCopy(3);
 }
 
 module.exports = singly_list;
