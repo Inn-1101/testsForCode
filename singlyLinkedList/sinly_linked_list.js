@@ -71,6 +71,15 @@ Node.prototype.search = function(val) {
         return newObj;
       }
 
+  Node.prototype.print = function(){
+      let current = this;
+
+      while(current){
+        console.log(current.val);
+        current = current.next;
+        }
+    }
+
   let list  = new Node(1);
   list.add(2);
   list.add(3);
@@ -79,6 +88,9 @@ Node.prototype.search = function(val) {
   list.search(2);
   list.remove(4);
   list.findAndCopy(3);
+  list.print();
+  console.log(list.toArray());
+  console.log(list);
 }
 
 module.exports = singly_list;
