@@ -4,6 +4,7 @@ const singly_list = ()=>{
       this.next = null;
     }
 
+/// Add an element into the list
   Node.prototype.add = function(val){
       let current = this;
 
@@ -26,6 +27,7 @@ const singly_list = ()=>{
      }
   }
 
+/// Search specific elememt
 Node.prototype.search = function(val) {
     let current = this;
       while(current) {
@@ -37,19 +39,21 @@ Node.prototype.search = function(val) {
       }
       return null;
       }
-    
-      Node.prototype.remove = function(val){
-         let current = this;
-           while(current) {
-             if(current.val === val) {
-               current.val = current.next.val;
-               current.next = current.next.next;
-               break;
-             }
-              current = current.next;
-           }
-      }
 
+//// Find and remove a specific element
+  Node.prototype.remove = function(val){
+     let current = this;
+       while(current) {
+         if(current.val === val) {
+           current.val = current.next.val;
+           current.next = current.next.next;
+           break;
+         }
+          current = current.next;
+       }
+  }
+
+/// Find an element than copy it and all next elements into a new obj
     Node.prototype.findAndCopy = function (val) {
         let current = this;
         let newObj;
@@ -71,6 +75,7 @@ Node.prototype.search = function(val) {
         return newObj;
       }
 
+/// Print function
   Node.prototype.print = function(){
       let current = this;
 
