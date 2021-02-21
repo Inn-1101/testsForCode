@@ -26,6 +26,30 @@ const singly_list = ()=>{
      }
   }
 
+Node.prototype.search = function(val) {
+    let current = this;
+      while(current) {
+        if(current.val === val){
+            // return current.val;
+            console.log('Searched element: ' + current.val);
+        }
+        current = current.next;
+      }
+      return null;
+      }
+    
+      Node.prototype.remove = function(val){
+         let current = this;
+           while(current) {
+             if(current.val === val) {
+               current.val = current.next.val;
+               current.next = current.next.next;
+               break;
+             }
+              current = current.next;
+           }
+      }
+
   let list  = new Node(1);
   list.add(2);
   list.add(3);
