@@ -82,6 +82,7 @@ Node.prototype.search = function(val) {
       while(current){
         console.log(current.val);
         current = current.next;
+        ///going to the next element
         }
     }
 
