@@ -14,7 +14,6 @@
         }else{
             return false;
         }
-       
     }
      
      console.log(fib(4));
