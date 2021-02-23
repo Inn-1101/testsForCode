@@ -1,4 +1,4 @@
-(function () {
+(function () { ///copying the nested array into the solution without recursion.
     let aObj = [1, 
       3, 
       [8, 
